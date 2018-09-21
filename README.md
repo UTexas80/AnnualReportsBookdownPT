@@ -24,8 +24,6 @@ Once that's done, you can execute any code you'd like. For every analysis you cr
 	library('ProjectTemplate')
 	load.project()
 
-(Please note that a file with this code, AnnualReportsBookdownPT.R has been created in the root directory and can be used to run this project).
-
-You'll have access to all your data, already fully preprocessed, and all the libraries you want to use.
+You'll have access to all your data, already fully preprocessed, and all the libraries you want to use. (Please note that a file with this code, AnnualReportsBookdownPT.R has been created in the root directory and can be used to run this project).
 
 For more details about ProjectTemplate, see http://projecttemplate.net
