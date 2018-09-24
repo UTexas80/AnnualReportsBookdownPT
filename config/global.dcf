@@ -8,7 +8,7 @@ munging: TRUE
 logging: FALSE
 logging_level: INFO
 load_libraries: FALSE
-libraries: reshape2, plyr, tidyverse, stringr, lubridate
+libraries: formatR, htmlwidgets, jpeg, lubridate, miniUI, plyr, png, reshape2, stringr, tidyverse, webshot
 as_factors: TRUE
 data_tables: FALSE
 attach_internal_libraries: FALSE
