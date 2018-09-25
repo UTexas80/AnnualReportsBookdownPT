@@ -27,4 +27,5 @@ colnames(grad_res)[2] <- "ay1617"
 colnames(grad_non_res)[2] <- "ay1617"
 
 #!/usr/bin/env Rscript
-bookdown::render_book("index.Rmd", "bookdown::gitbook")
+# bookdown::render_book("index.Rmd", "bookdown::gitbook")
+rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')

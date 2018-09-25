@@ -1,7 +1,7 @@
 --- 
 title: "Annual Reports"
 author: "Glen C. Falk"
-date: "2018-09-21"
+date: "2018-09-25"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -18,7 +18,7 @@ The **bookdown** package can be installed from CRAN or Github:
 
 
 ```r
-install.packages("bookdown")
+# install.packages("bookdown")
 # or the development version
 # devtools::install_github("rstudio/bookdown")
 ```
