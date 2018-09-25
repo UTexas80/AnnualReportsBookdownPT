@@ -1,21 +1,27 @@
-# Introduction {#intro}
+--- 
+title: "Annual Reports"
+author: "Glen C. Falk"
+date: "2018-09-25"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+# Financial Aid Summary
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+
+The **bookdown** package can be installed from CRAN or Github:
 
 
 ```r
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
+# install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
 ```
-
-<div class="figure" style="text-align: center">
-<img src="01-intro_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">(\#fig:nice-fig)Here is a nice figure!</p>
-</div>
-
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
 
 
 ```r
@@ -27,7 +33,7 @@ knitr::kable(
 
 
 
-Table: (\#tab:nice-tab)Here is a nice table!
+Table: (\#tab:tbl-summary)Here is a nice table!
 
  Sepal.Length   Sepal.Width   Petal.Length   Petal.Width  Species 
 -------------  ------------  -------------  ------------  --------
@@ -52,4 +58,8 @@ Table: (\#tab:nice-tab)Here is a nice table!
           5.7           3.8            1.7           0.3  setosa  
           5.1           3.8            1.5           0.3  setosa  
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+
+

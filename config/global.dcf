@@ -1,13 +1,13 @@
 as_factors: FALSE
 attach_internal_libraries: FALSE
-cache_loading: FALSE
-cache_loaded_data: FALSE
+cache_loading: TRUE
+cache_loaded_data: TRUE
 data_loading: TRUE
 data_loading_header: TRUE
 data_ignore:
 data_tables: TRUE
 load_libraries: TRUE
-libraries: datacheckr, data.table, devtools, dplyr, DT, flextable, formatR, gridExtra, htmltools, htmlwidgets, knitr, lubridate, miniUI, officer, openxlsx, orca, pander, plyr, plotly, processx, ProjectTemplate, readxl, ReporteRs, reshape2, rmarkdown, rvest, scales, stringr, tabulizer, tabulizerjars, tidyverse, tinytex, webshot, xlsx
+libraries: datacheckr, data.table, devtools, dplyr, DT, flextable, formatR, gridExtra, htmltools, htmlwidgets, knitr, lubridate, miniUI, officer, openxlsx, orca, pander, plyr, plotly, processx, ProjectTemplate, randomForest, readxl, ReporteRs, reshape2, rmarkdown, rvest, scales, stringr, tabulizer, tabulizerjars, tidyverse, tinytex, webshot, xlsx
 logging: TRUE
 logging_level: INFO
 munging: TRUE
