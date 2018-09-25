@@ -25,3 +25,6 @@ grad_non_res<-pdf.tbl[8:11, c(1, 11)]
 
 colnames(grad_res)[2] <- "ay1617"
 colnames(grad_non_res)[2] <- "ay1617"
+
+#!/usr/bin/env Rscript
+bookdown::render_book("index.Rmd", "bookdown::gitbook")
