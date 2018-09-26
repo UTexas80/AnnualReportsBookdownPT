@@ -16,7 +16,7 @@ names(pdf.tbl) <- pdf.dat[[1]][1, ]
 names(pdf.tbl)[1]<-"Description"
 pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y)))                                       # https://tinyurl.com/ya4ok9tb
 pdf.tbl[is.na(pdf.tbl)] <- ""
-
+pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
 pdf.tbl1<-pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y)))  
 
 
@@ -28,5 +28,7 @@ colnames(grad_non_res)[2] <- "ay1617"
 
 #!/usr/bin/env Rscript
 # bookdown::render_book("index.Rmd", "bookdown::gitbook")
-# rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')
-rmarkdown::render(source('./src/01-A.R'))
+rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')
+# rmarkdown::render(source('/src/01-A.R'))
+# rmarkdown::render(source('C:/Users/gfalk/Documents/GitHub/AnnualReportsBookdownPT/src/01-A.R'))
+# rmarkdown::render('/Users/gfalk/Documents/GitHub/AnnualReportsBookdownPT/src/01-A.R')

@@ -1,6 +1,6 @@
 # Add any project specific configuration here.
 add.config(
-  apply.override = FALSE
+ # apply.override = FALSE
 )
 currentYr <- as.numeric(format(Sys.Date(), format="%y"))
 lastYr <- currentYr - 1
@@ -19,5 +19,9 @@ Sys.setenv('MAPBOX_TOKEN' = 'pk.eyJ1IjoidXRleGFzODAiLCJhIjoiY2ptNzE2c2JrNGNpczN3
 
 # Add project specific configuration that can be overridden from load.project()
 add.config(
-  apply.override = TRUE
+#  apply.override = TRUE
 )
+
+## generate new functions that have the path pre-programmed in
+
+# source2 <- pathit(source, "src")

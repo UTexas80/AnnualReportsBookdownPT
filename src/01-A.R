@@ -38,18 +38,47 @@
 # comments without the extra tick show up like this.  And get included in code blocks
 # loading mtcars data
 data(mtcars)
+pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
+pdf.tbl[is.na(pdf.tbl)] <- ""
+data(pdf.tbl)
 
 #' ## Messing with data
  
 library('knitr')
 
+## ------------------------------------------------------------------------
+mtcars[1:5, 1:4] %>%
+  mutate(
+    car = row.names(.),
+    mpg = color_tile("white", "orange")(mpg),
+    cyl = cell_spec(cyl, "html", angle = (1:5)*60, 
+                    background = "red", color = "white", align = "center"),
+    disp = ifelse(disp > 200,
+                  cell_spec(disp, "html", color = "red", bold = T),
+                  cell_spec(disp, "html", color = "green", italic = T)),
+    hp = color_bar("lightgreen")(hp)
+  ) %>%
+  select(car, everything()) %>%
+  kable("html", escape = F) %>%
+  kable_styling("hover", full_width = F) %>%
+  column_spec(5, width = "3cm") %>%
+  add_header_above(c(" ", "Hello" = 2, "World" = 2))
+## ------------------------------------------------------------------------
+
+
 #' ### 3 ways to print an object
 #' ...specifically a data.frame in this case.  Ordered from least to most pretty (in my opinion).
-
+ 
+print(head(pdf.tbl))
 print(head(mtcars))
+
+knitr::kable(head(pdf.tbl))
 knitr::kable(head(mtcars))
 #' including `#+ results='asis'` chunk option for formatting
 #+ results='asis'
+
+knitr::kable(pdf.tbl)
+
 knitr::kable(head(mtcars))
 
 #' ### Plotting
@@ -63,9 +92,10 @@ plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 #' chunk options again with `#+`.  
 
 #' `#+ fig.width=4, fig.height=4` <!-- simply for illustrative purposes in the document-->
-#+ fig.width=4, fig.height=4
-plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
-
+#+ echo=F, fig.show = 'hold', out.width = "50%"
+c_pie_grad_res
+c_pie_grad_non
+#' plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 
 #' Small plots often render with strange resolution and relative sizings of labels, axes, etc.  The `dpi` chunk option can be used 
 #' to fix this.  Just be sure to adjust the fig.width and fig.height accordingly.
