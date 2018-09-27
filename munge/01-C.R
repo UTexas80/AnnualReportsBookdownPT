@@ -31,5 +31,3 @@ c_pie_grad_non<- plot_ly(grad_non_res, labels = ~Description, values = ~ay1617, 
 
 print(c_pie_grad_res)
 print(c_pie_grad_non)
-
-rmarkdown::render('/Users/gfalk/Documents/GitHub/AnnualReportsBookdownPT/src/01-A.R')

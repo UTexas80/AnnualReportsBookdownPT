@@ -65,7 +65,6 @@ mtcars[1:5, 1:4] %>%
   add_header_above(c(" ", "Hello" = 2, "World" = 2))
 ## ------------------------------------------------------------------------
 
-
 #' ### 3 ways to print an object
 #' ...specifically a data.frame in this case.  Ordered from least to most pretty (in my opinion).
  
@@ -81,7 +80,11 @@ knitr::kable(pdf.tbl)
 
 knitr::kable(head(mtcars))
 
+knitr::kable(list(head(mtcars), head(mtcars)))
+
 #' ### Plotting
+#+ echo=T, fig.show='hold', out.width = "50%"
+plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 
 #' We can change the chunk options we would use for a code block using `knitr` by using a comment that starts with `#+`.
@@ -92,16 +95,16 @@ plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 #' chunk options again with `#+`.  
 
 #' `#+ fig.width=4, fig.height=4` <!-- simply for illustrative purposes in the document-->
-#+ echo=F, fig.show = 'hold', out.width = "50%"
+#+ echo=F, fig-sub, fig.cap='two plots', fig.subcap=c('one plot', 'the other one'), out.width='50%', fig.asp=1, fig.ncol = 2
 c_pie_grad_res
 c_pie_grad_non
-#' plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 
 #' Small plots often render with strange resolution and relative sizings of labels, axes, etc.  The `dpi` chunk option can be used 
 #' to fix this.  Just be sure to adjust the fig.width and fig.height accordingly.
 #' 
 #' **Bad plot: ** `#+ fig.width=2, fig.height=2`
 #+ fig.width=2, fig.height=2
+
 hist(mtcars$mpg)
 
 #' **Good plot: ** `#+ fig.width=4, fig.height=4, dpi=50`

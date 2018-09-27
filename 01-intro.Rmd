@@ -18,4 +18,10 @@ knitr::kable(
 )
 ```
 
+```{r fig-sub, fig.cap='three plots', fig.subcap=c('one plot', 'the other one'), out.width='33%', fig.asp=1, fig.ncol = 2}
+plot(1:10)
+plot(rnorm(10), pch=19)
+plot(pressure, type = 'b', pch = 19)
+```
+
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].

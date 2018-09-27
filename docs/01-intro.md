@@ -52,4 +52,16 @@ Table: (\#tab:nice-tab)Here is a nice table!
           5.7           3.8            1.7           0.3  setosa  
           5.1           3.8            1.5           0.3  setosa  
 
+
+```r
+plot(1:10)
+plot(rnorm(10), pch=19)
+plot(pressure, type = 'b', pch = 19)
+```
+
+<div class="figure">
+<img src="01-intro_files/figure-html/fig-sub-1.png" alt="three plots" width="33%" /><img src="01-intro_files/figure-html/fig-sub-2.png" alt="three plots" width="33%" /><img src="01-intro_files/figure-html/fig-sub-3.png" alt="three plots" width="33%" />
+<p class="caption">(\#fig:fig-sub)three plots</p>
+</div>
+
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
