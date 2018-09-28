@@ -31,3 +31,14 @@ c_pie_grad_non<- plot_ly(grad_non_res, labels = ~Description, values = ~ay1617, 
 
 print(c_pie_grad_res)
 print(c_pie_grad_non)
+
+tt <- data.frame(labels1 = LETTERS[1:5], values1 = sample(100:200, size = 5),
+                 labels2 = LETTERS[6:10], values2 = sample(100:200, size = 5))
+
+grad_residence <- plot_ly(tt, labels = tt$labels1, values = tt$values1, type = "pie", 
+      domain = list(x = c(0, 0.4)), showlegend = F) %>% 
+      add_trace(labels = tt$labels2, values = tt$values2, type = "pie", 
+      domain = list(x = c(0.6, 1)), showlegend = F) %>% 
+      layout(title = "Pie chart - subplot")
+
+saveRDS(grad_residence, file="grad_residence.rds")

@@ -99,6 +99,9 @@ plot(mtcars$mpg, mtcars$disp, col=mtcars$cyl, pch=19)
 c_pie_grad_res
 c_pie_grad_non
 
+#' Small plots test
+grad_residence
+
 #' Small plots often render with strange resolution and relative sizings of labels, axes, etc.  The `dpi` chunk option can be used 
 #' to fix this.  Just be sure to adjust the fig.width and fig.height accordingly.
 #' 

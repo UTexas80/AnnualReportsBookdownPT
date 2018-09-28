@@ -19,7 +19,6 @@ pdf.tbl[is.na(pdf.tbl)] <- ""
 pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
 pdf.tbl1<-pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y)))  
 
-
 grad_res<-pdf.tbl[2:5, c(1, 11)]
 grad_non_res<-pdf.tbl[8:11, c(1, 11)]
 
