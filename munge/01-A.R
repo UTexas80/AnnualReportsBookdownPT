@@ -18,6 +18,17 @@ pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a
 pdf.tbl[is.na(pdf.tbl)] <- ""
 pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
 pdf.tbl1<-pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y)))  
+formattable(pdf.tbl)
+
+# pdf2<-datatable(pdf.tbl)
+pdf2<-datatable(data.table(pdf.tbl), options = list(
+  searching = FALSE,
+  paging = FALSE,
+  lengthMenu = c(5, 10, 15, 20)
+))
+pdf2<-formatCurrency(pdf2,2:11, digits = 0)
+saveRDS(pdf2, file="pdf2.rds")
+pdf2
 
 grad_res<-pdf.tbl[2:5, c(1, 11)]
 grad_non_res<-pdf.tbl[8:11, c(1, 11)]

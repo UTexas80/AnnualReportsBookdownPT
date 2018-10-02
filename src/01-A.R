@@ -1,7 +1,7 @@
 #' ---
 #' title: Sample HTML report generated from R script
-#' author: Andrew Brooks
-#' date: March 4, 2015
+#' author: Glen C. Falk
+#' date: October 1, 2018
 #' output:
 #'    html_document:
 #'      toc: true
@@ -38,9 +38,20 @@
 # comments without the extra tick show up like this.  And get included in code blocks
 # loading mtcars data
 data(mtcars)
-pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
-pdf.tbl[is.na(pdf.tbl)] <- ""
-data(pdf.tbl)
+# pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y)))                                       # https://tinyurl.com/ya4ok9tb
+# pdf.tbl[is.na(pdf.tbl)] <- ""
+# pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
+
+# data(pdf.tbl)
+
+pdf3<-datatable(data.table(pdf.tbl), options = list(
+  searching = FALSE,
+  paging = FALSE,
+  lengthMenu = c(5, 10, 15, 20)
+))
+pdf3<-formatCurrency(pdf3,2:11, digits = 0)
+
+pdf3
 
 #' ## Messing with data
  
