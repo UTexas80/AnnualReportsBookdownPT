@@ -1,0 +1,125 @@
+---
+title: "Annual Reports"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+
+Sidebar {.sidebar}
+=====================================
+
+```{r}
+# shiny inputs defined here
+```
+
+
+
+Charts {data-navmenu="Fin Aid Summary"}
+=====================================
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Cost of Attendance-Graduate
+
+```{r}
+pdf_tbl <- readRDS("pdf2.rds")
+pdf_tbl
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Cost of Attendance-Graduate Resident
+
+```{r echo=FALSE, COA-Grad-Resident}
+c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
+c_pie_grad_res
+```
+
+### Cost of Attendance-Graduate NonResident
+
+```{r}
+c_pie_grad_res <- readRDS("c_pie_grad_non.rds")
+c_pie_grad_non
+```
+
+Charts {data-navmenu="UG COA"}
+=====================================     
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Cost of Attendance-Graduate Resident
+
+```{r echo=FALSE, COA-Grad-Resident2}
+c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
+c_pie_grad_res
+```
+
+### Cost of Attendance-Graduate NonResident
+
+```{r}
+t_coa <- readRDS("t_coa.rds")
+t_coa
+```
+
+Tables {data-navmenu="Fin Aid Summary"}
+=====================================  
+
+Row
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+
+```
+   
+Row
+-------------------------------------
+    
+### Chart 2
+    
+```{r}
+
+```
+    
+### Chart 3
+
+```{r}
+
+```
+
+Tables {data-navmenu="UG COA"}
+=====================================    
+
+Row
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+
+```
+    
+### Chart 2
+
+```{r}
+
+```
+
+Row
+-------------------------------------
+    
+### Chart 1
+    
+```{r}
+
+```

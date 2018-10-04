@@ -18,10 +18,21 @@ c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
 c_pie_grad_res
 ```
 
-```{r echo=FALSE, COA-Grad-Non_Resident}
+```{r echo=FALSE, COA-Grad-Non_Resident, fig.cap='COA-Grad Non Resident',}
 c_pie_grad_non <- readRDS("c_pie_grad_non.rds")
 c_pie_grad_non
 ```
+
+# ```{r fig-sub, fig.cap='two plots', fig.subcap=c('one plot', 'the other one'), out.width='33%', fig.asp=1, fig.ncol = 2}
+# c_pie_grad_res
+# c_pie_grad_non
+# ```
+
+```{r echo=FALSE, COA-Grad}
+p_coa_gr <- readRDS("p_coa_gr.rds")
+p_coa_gr
+```
+
 
 ```{r echo=FALSE, Grad-COA}
 coa_grad <- readRDS("coa_grad.rds")

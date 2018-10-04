@@ -36,16 +36,7 @@ pdf2
 grad_res<-coa.gr.res
 grad_non_res<-coa.gr.non
 
-
-# colnames(grad_res)[2] <- "ay1617"
-# colnames(grad_non_res)[2] <- "ay1617"
-
-
-
-
-#!/usr/bin/env Rscript
-# bookdown::render_book("index.Rmd", "bookdown::gitbook")
-# rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')
-# rmarkdown::render(source('/src/01-A.R'))
-# rmarkdown::render(source('C:/Users/gfalk/Documents/GitHub/AnnualReportsBookdownPT/src/01-A.R'))
-# rmarkdown::render('/Users/gfalk/Documents/GitHub/AnnualReportsBookdownPT/src/01-A.R')
+coa.gr <-data.table(coa.gr.res, coa.gr.non)
+coa.gr<-coa.gr[, !c(3)]
+colnames(coa.gr)[2] <- "Res"                                               # Rename columns
+colnames(coa.gr)[3] <- "NonRes"
