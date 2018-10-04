@@ -1,7 +1,7 @@
 as_factors: FALSE
 attach_internal_libraries: FALSE
-cache_loading: TRUE
-cache_loaded_data: TRUE
+cache_loading: FALSE
+cache_loaded_data: FALSE
 data_loading: TRUE
 data_loading_header: TRUE
 data_ignore:

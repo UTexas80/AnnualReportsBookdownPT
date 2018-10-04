@@ -1,11 +1,11 @@
 # Example preprocessing script.
-url <- 'https://tinyurl.com/ybjbdpp3'                                           #Specifying the url for desired website to be scrapped
-webpage <- read_html(url)                                                       #Reading the HTML code from the website
-rank_data_html <- html_nodes(webpage,'.tableauViz')                             #Using CSS selectors to scrap the rankings section
+# url <- 'https://tinyurl.com/ybjbdpp3'                                           #Specifying the url for desired website to be scrapped
+# webpage <- read_html(url)                                                       #Reading the HTML code from the website
+# rank_data_html <- html_nodes(webpage,'.tableauViz')                             #Using CSS selectors to scrap the rankings section
 
 # Load Tabula functions
-library(tabulizer)
-library(tabulizerjars)
+# library(tabulizer)
+# library(tabulizerjars)
 
 pdf.file <- "~/AnnualReports/data/02UndergraduateCostOfAttendance.pdf"          # Define path to PDF file
 pdf.dat <- extract_tables(pdf.file)                                             # Extract data table
@@ -30,11 +30,18 @@ pdf2<-formatCurrency(pdf2,2:11, digits = 0)
 saveRDS(pdf2, file="pdf2.rds")
 pdf2
 
-grad_res<-pdf.tbl[2:5, c(1, 11)]
-grad_non_res<-pdf.tbl[8:11, c(1, 11)]
+# grad_res<-pdf.tbl[2:5, c(1, 11)]
+# grad_non_res<-pdf.tbl[8:11, c(1, 11)]
 
-colnames(grad_res)[2] <- "ay1617"
-colnames(grad_non_res)[2] <- "ay1617"
+grad_res<-coa.gr.res
+grad_non_res<-coa.gr.non
+
+
+# colnames(grad_res)[2] <- "ay1617"
+# colnames(grad_non_res)[2] <- "ay1617"
+
+
+
 
 #!/usr/bin/env Rscript
 # bookdown::render_book("index.Rmd", "bookdown::gitbook")
