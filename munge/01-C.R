@@ -1,6 +1,34 @@
 # Example preprocessing script.
 # change column names
 
+c_pie_ug_res <- plot_ly(coa.ug.res, labels = ~Description, values = ~cost, type = 'pie',
+        textposition = 'inside',
+        textinfo = 'label+percent',
+        insidetextfont = list(color = '#FFFFFF'),
+        hoverinfo = 'text',
+        text = ~paste('$', cost, ' dollars'),
+        marker = list(colors = colors,
+                      line = list(color = '#FFFFFF', width = 1)),
+                      #The 'pull' attribute can also be used to create space between the sectors
+        showlegend = FALSE) %>%
+  layout(title = str_c(currentAY, '-COA Undergrad Resident'),
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+c_pie_ug_non <- plot_ly(coa.ug.non, labels = ~Description, values = ~cost, type = 'pie',
+        textposition = 'inside',
+        textinfo = 'label+percent',
+        insidetextfont = list(color = '#FFFFFF'),
+        hoverinfo = 'text',
+        text = ~paste('$', cost, ' dollars'),
+        marker = list(colors = colors,
+                      line = list(color = '#FFFFFF', width = 1)),
+                      #The 'pull' attribute can also be used to create space between the sectors
+        showlegend = FALSE) %>%
+  layout(title = str_c(currentAY, '-COA Undergrad Non Resident'),
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
 c_pie_grad_res <- plot_ly(grad_res, labels = ~Description, values = ~cost, type = 'pie',
         textposition = 'inside',
         textinfo = 'label+percent',
@@ -62,7 +90,7 @@ p_coa_gr <- plot_ly(coa.gr, x = ~ Description, y = ~Res, type = 'bar', name = 'R
 p_coa_gr
 
 ## ----basic_treemap-------------------------------------------------------
-t_coa<-treemap(coa.gr.tree, #Your data frame object
+treemap(coa.gr.tree,                                                                                #Your data frame object
         index=c("residency","desc"),                                                                #A list of your categorical variables
         vSize = "cost",                                                                             #This is your quantitative variable
         type="index",                                                                               #Type sets the organization and color scheme of your treemap
@@ -71,11 +99,11 @@ t_coa<-treemap(coa.gr.tree, #Your data frame object
         fontsize.title = 14                                                                         #Change the font size of the title
         )
 
-t_coa
-
+saveRDS(c_pie_ug_res, file="c_pie_ug_res.rds")
+saveRDS(c_pie_ug_non, file="c_pie_ug_non.rds")
 saveRDS(c_pie_grad_res, file="c_pie_grad_res.rds")
 saveRDS(c_pie_grad_non, file="c_pie_grad_non.rds")
 saveRDS(coa_grad, file="coa_grad.rds")
 saveRDS(p_coa_gr, file="p_coa_gr.rds")
-saveRDS(t_coa, file="t_coa.rds")
 saveRDS(coa.gr, file="coa.gr.rds")
+saveRDS(coa.gr.tree, file="coa.gr.tree.rds")

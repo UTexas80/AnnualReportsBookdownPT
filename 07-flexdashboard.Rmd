@@ -18,8 +18,6 @@ Sidebar {.sidebar}
 # shiny inputs defined here
 ```
 
-
-
 Charts {data-navmenu="Fin Aid Summary"}
 =====================================
 
@@ -50,26 +48,6 @@ c_pie_grad_res <- readRDS("c_pie_grad_non.rds")
 c_pie_grad_non
 ```
 
-Charts {data-navmenu="UG COA"}
-=====================================     
-
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Cost of Attendance-Graduate Resident
-
-```{r echo=FALSE, COA-Grad-Resident2}
-c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
-c_pie_grad_res
-```
-
-### Cost of Attendance-Graduate NonResident
-
-```{r}
-t_coa <- readRDS("t_coa.rds")
-t_coa
-```
-
 Tables {data-navmenu="Fin Aid Summary"}
 =====================================  
 
@@ -79,7 +57,15 @@ Row
 ### Chart 1
     
 ```{r}
-
+coa.gr.tree <- readRDS("coa.gr.tree.rds")
+treemap(coa.gr.tree,                                                                                #Your data frame object
+        index=c("residency","desc"),                                                                #A list of your categorical variables
+        vSize = "cost",                                                                             #This is your quantitative variable
+        type="index",                                                                               #Type sets the organization and color scheme of your treemap
+        palette = "Blues",                                                                          #Select your color palette from the RColorBrewer presets or make your own.
+        title="Cost of Attendance",                                                                 #Customize your title
+        fontsize.title = 14                                                                         #Change the font size of the title
+        )
 ```
    
 Row
@@ -97,22 +83,44 @@ Row
 
 ```
 
+Charts {data-navmenu="UG COA"}
+=====================================     
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Cost of Attendance-Graduate Resident
+
+```{r echo=FALSE, COA-Grad-Resident2}
+c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
+c_pie_grad_res
+```
+
+### Cost of Attendance-Graduate Non Resident
+
+```{r}
+t_coa <- readRDS("t_coa.rds")
+t_coa
+```
+
 Tables {data-navmenu="UG COA"}
 =====================================    
 
 Row
 -------------------------------------
     
-### Chart 1
-    
-```{r}
+### Cost of Attendance-Undergraduate Resident
 
+```{r echo=FALSE, COA-Undergrad-Resident}
+c_pie_ug_res <- readRDS("c_pie_ug_res.rds")
+c_pie_ug_res
 ```
     
-### Chart 2
+### Cost of Attendance-Undergraduate Non Resident
 
-```{r}
-
+```{r echo=FALSE, COA-Undergrad-NonResident}
+c_pie_ug_non <- readRDS("c_pie_ug_non.rds")
+c_pie_ug_non
 ```
 
 Row
