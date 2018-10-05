@@ -10,7 +10,6 @@ output:
 library(flexdashboard)
 ```
 
-
 Sidebar {.sidebar}
 =====================================
 
@@ -46,6 +45,37 @@ c_pie_grad_res
 ```{r}
 c_pie_grad_res <- readRDS("c_pie_grad_non.rds")
 c_pie_grad_non
+```
+
+ChartsTables {data-navmenu="Fin Aid Summary"}
+=====================================
+
+
+Row
+-----------------------------------------------------------------------
+
+### Cost of Attendance-Graduate Resident
+
+```{r echo=FALSE, COA-Grad-ResidentA}
+c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
+c_pie_grad_res
+```
+
+### Cost of Attendance-Graduate NonResident
+
+```{r}
+c_pie_grad_res <- readRDS("c_pie_grad_non.rds")
+c_pie_grad_non
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Cost of Attendance-Graduate
+
+```{r}
+pdf_tbl <- readRDS("pdf2.rds")
+pdf_tbl
 ```
 
 Tables {data-navmenu="Fin Aid Summary"}
