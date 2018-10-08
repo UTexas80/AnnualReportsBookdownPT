@@ -1,0 +1,35 @@
+---
+title: "Annual Reports"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r uga_logo, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("lib/GEORGIA-XH-FC.png")
+```
+
+```{r}
+library(DT)
+datatable(iris, options = list(pageLength = 5))
+```
+
+```{r, echo = FALSE, out.width = '50%'}
+pdf_tbl <- readRDS("pdf_tbl.rds")
+library(knitr)
+library(formattable)
+library(pander)
+dataframe <- data.frame(pdf.tbl)
+dataframe[, c(2:11)] <-lapply(dataframe[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y))) 
+dataframe[is.na(dataframe)] <- ""
+dataframe<-dplyr::mutate_if(dataframe, is.numeric, format_dol_fun)
+
+dataframe
+
+panderOptions("digits", 2)
+pander(dataframe)
+pandoc.table(dataframe, split.table = Inf)
+
+pdf2
+```

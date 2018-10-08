@@ -21,7 +21,6 @@ mtcars[1:5, 1:4] %>%
   kable_styling("hover", full_width = F) %>%
   column_spec(5, width = "3cm") %>%
   add_header_above(c(" ", "Hello" = 2, "World" = 2))
-
 ## ------------------------------------------------------------------------
 iris[1:10, ] %>%
   mutate(

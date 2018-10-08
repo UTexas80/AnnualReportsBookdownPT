@@ -12,6 +12,22 @@ description: "This is a minimal example of using the bookdown package to write a
 
 # Financial Aid Summary
 
+```{r ugalogo, echo=FALSE,  out.width = '100%'}
+knitr::include_graphics("lib/GEORGIA-XH-FC.png")
+```
+
+```{r mtcars_table, echo=FALSE,results='asis'}
+knitr::kable(
+  mtcars[1:5, ], 
+  caption = "A knitr kable."
+)
+```
+
+```{r coa_table, echo=FALSE,}
+pdf_tbl <- readRDS("pdf2.rds")
+pdf_tbl
+```
+
 ## Cost of Attendance-Graduate
 ```{r echo=FALSE, COA-Grad-Resident}
 c_pie_grad_res <- readRDS("c_pie_grad_res.rds")
@@ -22,11 +38,6 @@ c_pie_grad_res
 c_pie_grad_non <- readRDS("c_pie_grad_non.rds")
 c_pie_grad_non
 ```
-
-# ```{r fig-sub, fig.cap='two plots', fig.subcap=c('one plot', 'the other one'), out.width='33%', fig.asp=1, fig.ncol = 2}
-# c_pie_grad_res
-# c_pie_grad_non
-# ```
 
 ```{r echo=FALSE, COA-Grad}
 p_coa_gr <- readRDS("p_coa_gr.rds")

@@ -1,0 +1,188 @@
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+```{r tblsummary, echo=FALSE}
+```{r tblsummary, eval=true, echo=FALSE}
+```{r tblsummary, eval=true, echo=FALSE}
+knitr::kable(pdf.tbl)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+knitr::kable(pdf.tbl)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+View(pdf.tbl)
+knitr::kable(
+head(pdf.tbl, 20), caption = 'Here is a nice table!',
+booktabs = TRUE
+)
+unlink('index_cache', recursive = TRUE)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+getwd()
+rmarkdown::render(source("src/01-A.R"))
+install.packages("randomForest")
+rmarkdown::render(source("src/01-A.R"))
+evaluateStuff <- F
+#+ eval=`evaluateStuff`
+cat('first thing to evaluate')
+#+ eval=`evaluateStuff`
+cat('second thing to evaluate')
+#+ eval=`evaluateStuff`
+cat('third thing to evaluate')
+' `rmarkdown::render('/Users/you/Documents/yourscript.R')`
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+rmarkdown::render('../src/01-A.R')
+rmarkdown::render('/src/01-A.R')
+getwd()
+?setwd()
+setwd
+setwd("C:/Users/gfalk/Documents/AnnualReportsBookdownPT/src")
+rmarkdown::render('01-A.R')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+rmarkdown::render('/src/01-A.R')
+getwd()
+rmarkdown::render('./src/01-A.R')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+grad_residence
+grad_residence
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+package_version('plotly')
+packageVersion('plotly')
+grad_residence
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+View(grad_residence)
+grad_residence
+print grad_residence
+print(grad_residence)
+grad_residence
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+knitr::kable(
+head(iris, 20), caption = 'Here is a nice table!',
+booktabs = TRUE
+)
+plot(1:10)
+plot(rnorm(10), pch=19)
+plot(pressure, type = 'b', pch = 19)
+grad_residence
+grad_residence
+grad_residence
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+data(grad_residence)
+c_grad_res<-yarrr::grad_residence
+?save
+save(grad_residence, file="city.rds")
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+grad_residence <- readRDS("grad_residence.rds")
+grad_residence <- readRDS("grad_residence.rds")
+grad_residence <- readRDS("grad_residence.rds")
+getwd()
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+?saverds
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+grad_res
+knitr::kable(pdf.tbl)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+is.data.table(pdf.tbl)
+pdf.tbl
+rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+glimpse(pdf.tbl)
+pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, currency(x))
+pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, currency())
+pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, currency())
+pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, currency(x))
+formatCurrency(pdf.tbl,2:11)
+pdf2<-datatable(pdf.tbl)
+formatCurrency(pdf2,2:11)
+pdf2<-formatCurrency(pdf2,2:11)
+pdf2
+print(pdf2)
+formattable(pdf2)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+rmarkdown::render('./src/01-A.R')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+View(pdf2)
+View(pdf2)
+pdf2<-datatable(pdf.tbl)
+pdf2<-formatCurrency(pdf2,2:11)
+pdf2
+formattable::format_table(pdf2)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+datatable
+datatable(pdf2)
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+pdf2<-datatable(pdf2, options = list(
+searching = FALSE,
+pageLength = 15,
+lengthMenu = c(5, 10, 15, 20)
+))
+pdf2<-datatable(pdf.tbl, options = list(
+searching = FALSE,
+pageLength = 15,
+lengthMenu = c(5, 10, 15, 20)
+))
+pdf2
+pdf2<-datatable(data.table(pdf.tbl, options = list(
+searching = FALSE,
+pageLength = 15,
+lengthMenu = c(5, 10, 15, 20)
+))
+pdf2<-formatCurrency(pdf2,2:11, digits = 0)
+pdf2<-datatable(data.table(pdf.tbl), options = list(
+searching = FALSE,
+pageLength = 15,
+lengthMenu = c(5, 10, 15, 20)
+))
+pdf2
+pdf2<-formatCurrency(pdf2,2:11, digits = 0)
+pdf2
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+pdf2<-datatable(data.table(pdf.tbl), options = list(
+searching = FALSE,
+paging = FALSE,
+lengthMenu = c(5, 10, 15, 20)
+))
+pdf2<-formatCurrency(pdf2,2:11, digits = 0)
+saveRDS(pdf2, file="pdf2.rds")
+pdf2
+pdf2
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+source('~/AnnualReportsBookdownPT/AnnualReportsBookdownPT.r')
+View(Cost.of.Attendance.Charts.2017.18.Books...Supplies)
+View(Cost.of.Attendance.Charts.2017.18.Non.Resident.Grad)
+View(Cost.of.Attendance.Charts.2017.18.Resident.Grad)
+View(Cost.of.Attendance.Charts.2017.18.Tifton.and.Griffin)
+View(Cost.of.Attendance.Charts.2017.18.Resident.Undergrad)
+View(Cost.of.Attendance.Charts.2017.18.Resident.Grad)
+View(Backup.ISIRsForAllStudents001.SQL)

@@ -99,6 +99,13 @@ treemap(coa.gr.tree,                                                            
         fontsize.title = 14                                                                         #Change the font size of the title
         )
 
+
+saveRDS(pdf.dat,  file="pdf_dat.rds")
+saveRDS(pdf.tbl, file="pdf_tbl.rds")
+saveRDS(pdf.tbl1, file="pdf_tbl1.rds")
+saveRDS(pdf2, file="pdf2.rds")
+
+
 saveRDS(c_pie_ug_res, file="c_pie_ug_res.rds")
 saveRDS(c_pie_ug_non, file="c_pie_ug_non.rds")
 saveRDS(c_pie_grad_res, file="c_pie_grad_res.rds")

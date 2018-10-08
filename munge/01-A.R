@@ -27,7 +27,6 @@ pdf2<-datatable(data.table(pdf.tbl), options = list(
   lengthMenu = c(5, 10, 15, 20)
 ))
 pdf2<-formatCurrency(pdf2,2:11, digits = 0)
-saveRDS(pdf2, file="pdf2.rds")
 pdf2
 
 # grad_res<-pdf.tbl[2:5, c(1, 11)]

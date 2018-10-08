@@ -1,0 +1,16 @@
+as_factors: FALSE
+attach_internal_libraries: FALSE
+cache_loading: TRUE
+cache_loaded_data: TRUE
+data_loading: TRUE
+data_loading_header: TRUE
+data_ignore:
+data_tables: TRUE
+load_libraries: TRUE
+libraries: datacheckr, data.table, devtools, DiagrammeR, dplyr, DT, flextable, formatR, formattable, gridExtra, htmltools, htmlwidgets, kableExtra, knitr, lubridate, miniUI, officer, openxlsx, orca, pander, plyr, plotly, processx, ProjectTemplate, randomForest, readxl, ReporteRs, reshape2, rmarkdown, rvest, scales, stringr, tabulizer, tabulizerjars, tidyverse, tinytex, webshot, xlsx
+logging: TRUE
+logging_level: INFO
+munging: TRUE
+recursive_loading: TRUE
+sticky_variables: NONE
+version: 0.8.2
