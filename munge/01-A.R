@@ -18,15 +18,29 @@ pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a
 pdf.tbl[is.na(pdf.tbl)] <- ""
 pdf.tbl<-dplyr::mutate_if(pdf.tbl, is.numeric, format_dol_fun)
 pdf.tbl1<-pdf.tbl[, c(2:11)] <-lapply(pdf.tbl[, c(2:11)], function(y) as.numeric(gsub('[^a-zA-Z0-9.]', '', y)))  
-formattable(pdf.tbl)
-
+# formattable(pdf.tbl)
 # pdf2<-datatable(pdf.tbl)
-pdf2<-datatable(data.table(pdf.tbl), options = list(
-  searching = FALSE,
+names(pdf.tbl)<- gsub("20","",names(pdf.tbl))                                   # rename columns
+pdf2<-datatable(data.table(pdf.tbl), caption='Undergraduate Cost of Attendance', rownames=FALSE, options = list(
+  autowidth = TRUE,
+  bInfo = FALSE,
+  bSort = FALSE,
+  class = 'dt-center',
+  columnDefs = list(list(width = '175px', targets = c(0), width = '210px', targets = c(1:11))),
+  colnames = NULL,
+  initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+    "}"),
+  options = list(dom = 'f'),
   paging = FALSE,
-  lengthMenu = c(5, 10, 15, 20)
+  rownames = FALSE,
+  searching = FALSE,
+  showNEntries = FALSE
 ))
-pdf2<-formatCurrency(pdf2,2:11, digits = 0)
+
+pdf2<-formatCurrency(pdf2,2:11, digits = 0) %>%
+      formatStyle(columns = c(2:11), fontSize = '100%')
 pdf2
 
 # grad_res<-pdf.tbl[2:5, c(1, 11)]

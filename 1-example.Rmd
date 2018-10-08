@@ -9,10 +9,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r uga_logo, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("lib/GEORGIA-XH-FC.png")
 ```
-
+<h2><center><b>Undergraduate Cost of Attendance</b></center></h2>
 ```{r}
-library(DT)
-datatable(iris, options = list(pageLength = 5))
+pdf2
 ```
 
 ```{r, echo = FALSE, out.width = '50%'}
@@ -25,11 +24,6 @@ dataframe[, c(2:11)] <-lapply(dataframe[, c(2:11)], function(y) as.numeric(gsub(
 dataframe[is.na(dataframe)] <- ""
 dataframe<-dplyr::mutate_if(dataframe, is.numeric, format_dol_fun)
 
-dataframe
-
 panderOptions("digits", 2)
-pander(dataframe)
-pandoc.table(dataframe, split.table = Inf)
-
-pdf2
+pander(dataframe, split.table = Inf)
 ```

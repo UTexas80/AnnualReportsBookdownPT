@@ -7,7 +7,7 @@ data_loading_header: TRUE
 data_ignore:
 data_tables: TRUE
 load_libraries: TRUE
-libraries: datacheckr, data.table, d3heatmap, devtools, DiagrammeR, dplyr, DT, flexdashboard, flextable, formatR, formattable, gridExtra, hrbrthemes, htmlTable, htmltools, htmlwidgets, kableExtra, knitr, lubridate, miniUI, officer, openxlsx, orca, pander, plyr, plotly, processx, ProjectTemplate, randomForest, readxl, ReporteRs, reshape2, rmarkdown, rvest, scales, stringr, tabulizer, tabulizerjars, tidyverse, tinytex, treemap, treemapify, webshot, xlsx
+libraries: datacheckr, data.table, d3heatmap, devtools, DiagrammeR, dplyr, DT, flexdashboard, flextable, formatR, formattable, gridExtra, hrbrthemes, htmlTable, htmltools, htmlwidgets, kableExtra, knitr, lubridate, miniUI, officer, openxlsx, orca, pander, plyr, plotly, processx, ProjectTemplate, randomForest, readxl, ReporteRs, reshape2, rmarkdown, rvest, scales, stringr, stargazer, tabulizer, tabulizerjars, tidyverse, tinytex, treemap, treemapify, webshot, xlsx, xtable
 logging: TRUE
 logging_level: INFO
 munging: TRUE
