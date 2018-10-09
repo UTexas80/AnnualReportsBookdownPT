@@ -1,6 +1,7 @@
 .Rproj.user
-.Rhistory
+# RStudio files.Rhistory
 .RData
 .Ruserdata
+*.rds
 _bookdown_files
 cache/
